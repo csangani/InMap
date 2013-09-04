@@ -1,0 +1,38 @@
+<script type="text/javascript">
+	var CIMAMMapCanvasWidth = #CANVASWIDTH#;
+	var CIMAMMapCanvasHeight = #CANVASHEIGHT#;
+	var CIMAMMapX = #STARTX#;
+	var CIMAMMapY = #STARTY#;
+	var CIMAMMapStartX = 0;
+	var CIMAMMapStartY = 0;
+	var CIMAMMapDragged = false;
+	var CIMAMMapCanvas = Raphael("CIMAM-Map-Canvas", CIMAMMapCanvasWidth, CIMAMMapCanvasHeight);
+	var CIMAMMapVectorAttributes = {
+		fill: "#444",
+		stroke: "#666",
+		"stroke-width": 1,
+		"stroke-linejoin": "round",
+		opacity: 0.5
+	};
+	var CIMAMMapTextAttributes = {
+		fill: "#666",
+		"font-size": 11
+	};
+	var CIMAMMapVectors = new Array();
+	var CIMAMMapNames = new Array();
+	var CIMAMMapDescriptions = new Array();
+	var CIMAMMapUIDs = new Array();
+
+	#ARRAYINIT#
+
+	var CIMAMMapCurrentFloor = 1;
+	var CIMAMMapZoomLevel = 1;
+	
+	#VECTORINIT#
+
+</script>
+<script type="text/javascript" src="#BASE#CIMAMMapEffects.js"></script>
+<script type="text/javascript">		
+	CIMAMMapTranslate(-CIMAMMapX, -CIMAMMapY);
+	CIMAMMapDisplayFloor(1);
+</script>
